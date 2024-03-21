@@ -5,9 +5,11 @@ let arr = [1,2,3,4];
 const pr  = new Promise((resolve,reject)=>{
 	setTimeout(()=>{
 		resolve(arr.filter(a=>a%2==0));
-	},3000);
+	},1000); 
 });
 
 pr.then((data)=>{
-	outputContainer.innerText =data.map((a)=>a*2);
+	setTimeout(()=>{
+		outputContainer.innerText =data.map((a)=>a*2);
+	},2000)
 	}).catch((err)=>outputContainer.innerText = err);  
