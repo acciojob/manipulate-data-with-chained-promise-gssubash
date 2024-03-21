@@ -10,4 +10,4 @@ const pr  = new Promise((resolve,reject)=>{
 
 pr.then((data)=>{
 	outputContainer.innerText =data.map((a)=>a*2);
-	}).catch((err)=>outputContainer.innerText = err);
+	}).catch((err)=>outputContainer.innerText = err);  
