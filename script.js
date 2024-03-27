@@ -3,13 +3,22 @@ const outputContainer = document.getElementById('output');
 
 let arr = [1,2,3,4]; 
 const pr  = new Promise((resolve,reject)=>{
-	setTimeout(()=>{
-		resolve(arr.filter(a=>a%2==0));
-	},1000); 
+	
+		resolve(arr); 
+	
 });
 
 pr.then((data)=>{
+	return new Promise((rs,rj)=>{
+		setTimeout(()=>{
+		let val =data.filter(a=>a%2==0);
+	rs(val); 
+	},1000); 
+	})
+	
+}).then((data)=>{
+	// console.log(data);
 	setTimeout(()=>{
-		outputContainer.innerText =data.map((a)=>a*2);
+		outputContainer.innerText =data.map(a=>a*2);
 	},2000)
 	}).catch((err)=>outputContainer.innerText = err);  
