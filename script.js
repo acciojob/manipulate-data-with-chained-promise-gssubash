@@ -4,8 +4,8 @@ const outputContainer = document.getElementById('output');
 let arr = [1,2,3,4]; 
 const pr  = new Promise((resolve,reject)=>{
 	
-		resolve(arr); 
-	
+		resolve(arr);  
+	 
 });
 
 pr.then((data)=>{
