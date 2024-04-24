@@ -7,7 +7,7 @@ const pr  = new Promise((resolve,reject)=>{
 		resolve(arr);   
 	 
 }); 
-
+ 
 pr.then((data)=>{
 	return new Promise((rs,rj)=>{
 		setTimeout(()=>{ 
