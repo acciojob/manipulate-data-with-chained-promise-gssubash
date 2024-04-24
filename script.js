@@ -6,7 +6,7 @@ const pr  = new Promise((resolve,reject)=>{
 	
 		resolve(arr);   
 	 
-});
+}); 
 
 pr.then((data)=>{
 	return new Promise((rs,rj)=>{
@@ -22,4 +22,4 @@ pr.then((data)=>{
 	setTimeout(()=>{
 		outputContainer.innerText =data.map(a=>a*2);
 	},2000)
-	}).catch((err)=>outputContainer.innerText = err);  
+		}).catch((err)=>outputContainer.innerText = err);  
