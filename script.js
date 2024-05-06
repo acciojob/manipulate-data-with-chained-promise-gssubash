@@ -3,7 +3,7 @@ const outputContainer = document.getElementById('output');
 
 let arr = [1,2,3,4]; 
 const pr  = new Promise((resolve,reject)=>{
-	
+	 
 		resolve(arr);   
 	 
 }); 
@@ -20,6 +20,6 @@ pr.then((data)=>{
 }).then((data)=>{
 	// console.log(data);
 	setTimeout(()=>{
-		outputContainer.innerText =data.map(a=>a*2);
+		outputContainer.innerText =data.map(a=>a*2).join(' ');
 	},2000)
 		}).catch((err)=>outputContainer.innerText = err);  
